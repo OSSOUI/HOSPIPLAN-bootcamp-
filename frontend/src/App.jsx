@@ -6,7 +6,8 @@ import StaffForm from './pages/StaffForm';
 import ShiftList from './pages/ShiftList';
 import AssignmentForm from './pages/AssignmentForm';
 import AbsenceList from './pages/AbsenceList';
-import PlanningCalendar from './pages/PlanningCalendar';   // ← Ajout
+import PlanningCalendar from './pages/PlanningCalendar';   
+import PlanningGenerator from './pages/PlanningGenerator';
 
 export default function App() {
   return (
@@ -22,7 +23,8 @@ export default function App() {
             <Route path="/shifts" element={<ShiftList />} />
             <Route path="/assignments" element={<AssignmentForm />} />
             <Route path="/absences" element={<AbsenceList />} />
-            <Route path="/planning" element={<PlanningCalendar />} />   
+            <Route path="/planning" element={<PlanningCalendar />} />  
+            <Route path="/generate" element={<PlanningGenerator />} />
           </Routes>
         </main>
       </div>

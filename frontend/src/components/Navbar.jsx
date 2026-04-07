@@ -10,6 +10,7 @@ export default function Navbar() {
     { to: '/planning', label: '📅 Planning' }, 
     { to: '/assignments', label: '🔗 Affectations' },
     { to: '/absences', label: '🏖️ Absences' },
+    { to: '/generate', label: '🎯 Générer' },
   ];
 
   return (

@@ -4,6 +4,8 @@ from rest_framework.decorators import action, api_view
 from rest_framework.response import Response
 from django.db.models import Q, Count
 from django.utils import timezone
+from core.services.planning_generator import PlanningGenerator
+
 
 from .models import (
     Staff, Role, Specialty, Certification, StaffCertification,
@@ -406,3 +408,28 @@ def dashboard(request):
         'understaffed_shifts_today': understaffed_today,
         'certifications_expiring_30d': expiring_certs,
     })
+
+@api_view(['POST'])
+def generate_planning(request):
+    """
+    POST /api/plannings/generate/
+    {
+        "start_date": "2025-01-20",
+        "end_date": "2025-01-26",
+        "service_id": null   // optionnel
+    }
+    """
+    start_date = request.data.get('start_date')
+    end_date = request.data.get('end_date')
+    service_id = request.data.get('service_id')
+
+    if not start_date or not end_date:
+        return Response(
+            {'error': 'Les dates de début et de fin sont obligatoires'},
+            status=400
+        )
+
+    generator = PlanningGenerator()
+    result = generator.generate(start_date, end_date, service_id)
+
+    return Response(result)
