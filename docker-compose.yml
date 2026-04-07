@@ -4,11 +4,11 @@ services:
   db:
     image: postgres:15-alpine
     environment:
-      POSTGRES_DB: hospiplan
+      POSTGRES_DB: db_hospiplan
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: 230803
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
 
@@ -22,9 +22,10 @@ services:
       - "8000:8000"
     environment:
       DB_HOST: db
-      DB_NAME: hospiplan
+      DB_NAME: db_hospiplan
       DB_USER: postgres
-      DB_PASSWORD: postgres
+      DB_PASSWORD: 230803
+      DB_PORT: '5432'
       DJANGO_DEBUG: 'True'
     depends_on:
       - db
