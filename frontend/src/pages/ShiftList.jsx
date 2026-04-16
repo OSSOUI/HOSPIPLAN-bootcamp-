@@ -42,7 +42,7 @@ export default function ShiftList() {
 
   return (
     <div style={{ padding: '2rem' }}>
-      <h2>📅 Créneaux de garde</h2>
+      <h2> Créneaux de garde</h2>
 
       {/* Filtres */}
       <div style={{ display: 'flex', gap: '1rem', margin: '1rem 0', flexWrap: 'wrap' }}>

@@ -46,7 +46,7 @@ export default function AbsenceList() {
   return (
     <div style={{ padding: '2rem' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <h2>🏖️ Absences</h2>
+        <h2> Absences</h2>
         <button
           onClick={() => setShowForm(!showForm)}
           style={{

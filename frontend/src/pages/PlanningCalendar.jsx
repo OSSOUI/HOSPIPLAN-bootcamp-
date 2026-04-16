@@ -73,7 +73,7 @@ export default function PlanningCalendar() {
 
   return (
     <div style={{ padding: '20px' }}>
-      <h2>📅 Planning Général des Affectations</h2>
+      <h2> Planning Général des Affectations</h2>
       <p style={{ color: '#555', marginBottom: '20px' }}>
         Visualisation des gardes et affectations sur un calendrier
       </p>

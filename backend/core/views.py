@@ -409,14 +409,15 @@ def dashboard(request):
         'certifications_expiring_30d': expiring_certs,
     })
 
+
 @api_view(['POST'])
 def generate_planning(request):
     """
     POST /api/plannings/generate/
-    {
-        "start_date": "2025-01-20",
-        "end_date": "2025-01-26",
-        "service_id": null   // optionnel
+    Body : {
+        "start_date": "2026-04-16",
+        "end_date": "2026-04-22",
+        "service_id": null
     }
     """
     start_date = request.data.get('start_date')
@@ -425,11 +426,16 @@ def generate_planning(request):
 
     if not start_date or not end_date:
         return Response(
-            {'error': 'Les dates de début et de fin sont obligatoires'},
+            {'error': 'Les dates start_date et end_date sont obligatoires.'},
             status=400
         )
 
-    generator = PlanningGenerator()
-    result = generator.generate(start_date, end_date, service_id)
-
-    return Response(result)
+    try:
+        generator = PlanningGenerator()
+        result = generator.generate(start_date, end_date, service_id)
+        return Response(result)
+    except Exception as e:
+        return Response(
+            {'error': str(e)},
+            status=500
+        )

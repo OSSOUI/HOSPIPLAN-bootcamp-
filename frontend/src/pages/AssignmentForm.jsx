@@ -46,7 +46,7 @@ export default function AssignmentForm() {
         staff_id: parseInt(selectedStaff),
         shift_id: parseInt(selectedShift),
       });
-      setSuccess('✅ Affectation créée avec succès !');
+      setSuccess('Affectation créée avec succès !');
       setSelectedStaff('');
       setSelectedShift('');
       setEligibleInfo(null);
@@ -83,7 +83,7 @@ export default function AssignmentForm() {
 
   return (
     <div style={{ padding: '2rem', maxWidth: '800px' }}>
-      <h2>🔗 Nouvelle Affectation</h2>
+      <h2> Nouvelle Affectation</h2>
       <p style={{ color: '#666' }}>
         Affectez un soignant à un créneau de garde. Les contraintes dures
         seront vérifiées automatiquement.
@@ -108,7 +108,7 @@ export default function AssignmentForm() {
         {/* Sélection du créneau */}
         <div>
           <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '0.5rem' }}>
-            📅 Créneau de garde *
+            Créneau de garde *
           </label>
           <select
             value={selectedShift}
@@ -147,7 +147,7 @@ export default function AssignmentForm() {
         {/* Sélection du soignant */}
         <div>
           <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '0.5rem' }}>
-            👤 Soignant *
+             Soignant *
           </label>
           <select
             value={selectedStaff}

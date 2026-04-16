@@ -36,6 +36,6 @@ router.register(r'rules', views.RuleViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('dashboard/', views.dashboard, name='dashboard'),
-]
+    path('plannings/generate/', views.generate_planning, name='generate-planning'),
 
-path('plannings/generate/', views.generate_planning, name='generate-planning'),
+]

@@ -4,13 +4,13 @@ export default function Navbar() {
   const location = useLocation();
 
   const links = [
-    { to: '/', label: '📊 Dashboard' },
-    { to: '/staff', label: '👤 Soignants' },
-    { to: '/shifts', label: '📅 Gardes' },
-    { to: '/planning', label: '📅 Planning' }, 
-    { to: '/assignments', label: '🔗 Affectations' },
-    { to: '/absences', label: '🏖️ Absences' },
-    { to: '/generate', label: '🎯 Générer' },
+    { to: '/', label: ' Dashboard' },
+    { to: '/staff', label: ' Soignants' },
+    { to: '/shifts', label: ' Gardes' },
+    { to: '/planning', label: ' Planning' }, 
+    { to: '/assignments', label: ' Affectations' },
+    { to: '/absences', label: ' Absences' },
+    { to: '/generate', label: ' Générer' },
   ];
 
   return (
@@ -23,7 +23,7 @@ export default function Navbar() {
       boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
     }}>
       <h1 style={{ color: '#fff', margin: '0.8rem 0', fontSize: '1.3rem' }}>
-        🏥 HospiPlan
+         HospiPlan
       </h1>
       <div style={{ display: 'flex', gap: '0.5rem', marginLeft: '2rem' }}>
         {links.map(link => (

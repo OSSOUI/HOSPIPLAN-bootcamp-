@@ -37,7 +37,7 @@ export default function PlanningGenerator() {
 
   return (
     <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
-      <h2>🎯 Générateur Automatique de Planning</h2>
+      <h2> Générateur Automatique de Planning</h2>
       <p style={{ color: '#666', marginBottom: '20px' }}>
         Générez automatiquement un planning optimal en respectant les contraintes dures
         tout en minimisant les contraintes molles.
@@ -84,21 +84,21 @@ export default function PlanningGenerator() {
               fontWeight: 'bold', marginTop: '10px'
             }}
           >
-            {loading ? '⏳ Génération en cours...' : '🚀 Générer le planning'}
+            {loading ? ' Génération en cours...' : ' Générer le planning'}
           </button>
         </div>
       </form>
 
       {error && (
         <div style={errorStyle}>
-          ❌ {error.message || 'Erreur lors de la génération'}
+           {error.message || 'Erreur lors de la génération'}
         </div>
       )}
 
       {result && (
         <div style={resultStyle}>
           <h3 style={{ marginTop: 0 }}>
-            {result.success ? '✅ Succès' : '⚠️ Résultat partiel'}
+            {result.success ? ' Succès' : ' Résultat partiel'}
           </h3>
           
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
@@ -140,7 +140,7 @@ export default function PlanningGenerator() {
               border: 'none', borderRadius: '6px', cursor: 'pointer', marginTop: '10px'
             }}
           >
-            📅 Voir le planning
+             Voir le planning
           </button>
         </div>
       )}

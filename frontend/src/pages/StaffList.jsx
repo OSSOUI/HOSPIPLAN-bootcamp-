@@ -37,7 +37,7 @@ export default function StaffList() {
   return (
     <div style={{ padding: '2rem' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <h2>👤 Liste des Soignants</h2>
+        <h2> Liste des Soignants</h2>
         <Link to="/staff/new">
           <button style={{
             background: '#3182ce', color: '#fff',

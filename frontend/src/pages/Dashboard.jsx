@@ -16,12 +16,12 @@ export default function Dashboard() {
   if (!data) return <p>Erreur de chargement du dashboard.</p>;
 
   const cards = [
-    { label: 'Soignants actifs', value: data.total_active_staff, icon: '👤', color: '#3182ce' },
-    { label: 'Services', value: data.total_services, icon: '🏥', color: '#38a169' },
-    { label: "Absents aujourd'hui", value: data.absences_today, icon: '🏖️', color: '#d69e2e' },
-    { label: "Gardes aujourd'hui", value: data.shifts_today, icon: '📅', color: '#805ad5' },
-    { label: 'Gardes sous-couvertes', value: data.understaffed_shifts_today, icon: '⚠️', color: '#e53e3e' },
-    { label: 'Certifications expirant (30j)', value: data.certifications_expiring_30d, icon: '📋', color: '#dd6b20' },
+    { label: 'Soignants actifs', value: data.total_active_staff, color: '#3182ce' },
+    { label: 'Services', value: data.total_services, color: '#38a169' },
+    { label: "Absents aujourd'hui", value: data.absences_today, color: '#d69e2e' },
+    { label: "Gardes aujourd'hui", value: data.shifts_today, color: '#805ad5' },
+    { label: 'Gardes sous-couvertes', value: data.understaffed_shifts_today, color: '#e53e3e' },
+    { label: 'Certifications expirant (30j)', value: data.certifications_expiring_30d, color: '#dd6b20' },
   ];
 
   return (
